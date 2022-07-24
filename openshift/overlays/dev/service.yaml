@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rollouts-demo
+  labels:
+    app: rollouts-demo
+spec:
+  selector:
+    app: rollouts-demo
+  ports:
+  - name: 8080-tcp
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
