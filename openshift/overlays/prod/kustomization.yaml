@@ -1,5 +1,5 @@
 bases:
   - ../../base
-patchesStrategicMerge:
+resources:
   - active-service.yaml
   - preview-service.yaml

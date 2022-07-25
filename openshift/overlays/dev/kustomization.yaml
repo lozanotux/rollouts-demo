@@ -1,4 +1,4 @@
 bases:
   - ../../base
-patchesStrategicMerge:
+resources:
   - service.yaml
