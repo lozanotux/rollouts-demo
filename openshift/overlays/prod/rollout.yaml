@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: docker.io/argoproj/rollouts-demo:yellow
+        image: docker.io/argoproj/rollouts-demo:blue
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

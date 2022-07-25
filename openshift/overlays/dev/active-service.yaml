@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rollouts-demo
+  name: rollouts-demo-active
   labels:
     app: rollouts-demo
 spec:
