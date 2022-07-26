@@ -3,5 +3,3 @@ bases:
 resources:
   - preview-service.yaml
   - rollout.yaml
-patchesStrategicMerge:
-  - deployment_patch.yaml
