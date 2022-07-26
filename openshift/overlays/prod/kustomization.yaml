@@ -1,6 +1,7 @@
 bases:
   - ../../base
 resources:
-  - active-service.yaml
   - preview-service.yaml
   - rollout.yaml
+patchesStrategicMerge:
+  - deployment_patch.yaml

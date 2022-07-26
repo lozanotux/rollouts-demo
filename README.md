@@ -1,6 +1,7 @@
 # rollouts-demo (Blue-Green)
 
 This repository has an example Rollout App packaged with kustomize to test ArgoCD Rollouts with Blue-Green strategy.
+![concept](https://argoproj.github.io/argo-rollouts/concepts-assets/blue-green-deployments.png)
 
 ## Prerequisites
 
