@@ -1,6 +1,7 @@
 # ArgoCD rollouts-demo (Blue-Green)
 
-This repository has an example Rollout App packaged with kustomize to test ArgoCD Rollouts with Blue-Green strategy.
+This repository has an example App packaged with kustomize to test **ArgoCD Rollouts** with Blue-Green strategy.
+<br><br>
 ![concept](https://argoproj.github.io/argo-rollouts/concepts-assets/blue-green-deployments.png)
 
 ## Prerequisites
@@ -11,6 +12,8 @@ This repository has an example Rollout App packaged with kustomize to test ArgoC
 $ oc create namespace argo-rollouts
 $ oc apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
 ```
+
+> **Note:** is very imporant keep the exactly name of the namespace, otherwise **ArgoCD Rollout** did not work.
 
 ## How to use this repository
 
@@ -29,7 +32,7 @@ $ oc apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/release
 * **Type:** Kustomize
 
 2. Click on the **Sync** button to force a synchronization.
-3. Test you **Rollout App* oppening the URL and seeing blue squares.
+3. Test you **Rollout App** oppening the URL and seeing blue squares.
 4. Change the [rollout.yaml](./openshift/overlays/prod/rollout.yaml) with another version of the image (yellow, purpple, green, orange, red). And commit your changes.
 5. Your rollout after your changes are commited, is in **pause** state (`RolloutPaused`). To **promote** your Rollout to next version, you need a kubectl plugin to operate it. Para mas información de como instalarlo vea [#kubectl-plugin-installation](https://argoproj.github.io/argo-rollouts/installation/#kubectl-plugin-installation).
 
@@ -39,3 +42,5 @@ $ kubectl argo rollouts promote rollouts-demo -n ${YOUR_TARGET_NAMESPACE}
 ```
 
 > **Note:** With that command, the `active-service` switch the version to the new one. And the `preview-service` is become available again to receive a future new version.
+
+![how it works](./docs/how-it-works.jpeg)
